@@ -1,0 +1,15 @@
+import java.rmi.*;
+import java.rmi.registry.*;
+
+interface RemoteService extends Remote {
+    String sayHello() throws RemoteException;
+}
+
+public class RMIExample {
+    public static void main(String[] args) throws Exception {
+        RemoteService service = new RemoteServiceImpl();
+        Registry registry = LocateRegistry.createRegistry(1099);
+        registry.bind("RemoteService", service);
+        System.out.println("Service started...");
+    }
+}
