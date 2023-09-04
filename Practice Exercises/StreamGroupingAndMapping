@@ -1,0 +1,13 @@
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class StreamGroupingAndMapping {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie", "David", "Eve");
+
+        Map<Character, List<String>> groupedNames = names.stream()
+                .collect(Collectors.groupingBy(s -> s.charAt(0)));
+
+        System.out.println(groupedNames);
+    }
+}
