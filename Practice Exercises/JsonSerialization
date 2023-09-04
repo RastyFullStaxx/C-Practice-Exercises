@@ -1,0 +1,39 @@
+import java.lang.annotation.*;
+import java.lang.reflect.Field;
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+@interface JsonField {
+    String value() default "";
+}
+
+class Person {
+    @JsonField("name")
+    private String fullName;
+    @JsonField("age")
+    private int age;
+
+    public Person(String fullName, int age) {
+        this.fullName = fullName;
+        this.age = age;
+    }
+}
+
+public class JsonSerialization {
+    public static void main(String[] args) throws IllegalAccessException {
+        Person person = new Person("Alice", 30);
+
+        Class<?> cls = person.getClass();
+        Field[] fields = cls.getDeclaredFields();
+
+        for (Field field : fields) {
+            if (field.isAnnotationPresent(JsonField.class)) {
+                JsonField jsonField = field.getAnnotation(JsonField.class);
+                field.setAccessible(true);
+                String fieldName = jsonField.value().isEmpty() ? field.getName() : jsonField.value();
+                Object value = field.get(person);
+                System.out.println(fieldName + ": " + value);
+            }
+        }
+    }
+}
