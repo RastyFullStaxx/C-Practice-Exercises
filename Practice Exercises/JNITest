@@ -1,0 +1,11 @@
+public class JNITest {
+    static {
+        System.loadLibrary("mylibrary");
+    }
+
+    public static native void sayHello();
+
+    public static void main(String[] args) {
+        JNITest.sayHello();
+    }
+}
