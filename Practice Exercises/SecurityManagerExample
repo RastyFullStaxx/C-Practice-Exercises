@@ -1,0 +1,14 @@
+import java.security.*;
+
+public class SecurityManagerExample {
+    public static void main(String[] args) {
+        SecurityManager securityManager = new SecurityManager();
+        System.setSecurityManager(securityManager);
+
+        try {
+            System.exit(1); // This will trigger a SecurityException
+        } catch (SecurityException e) {
+            System.out.println("Security Exception: " + e.getMessage());
+        }
+    }
+}
