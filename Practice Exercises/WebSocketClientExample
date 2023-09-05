@@ -1,0 +1,18 @@
+import org.glassfish.tyrus.client.ClientManager;
+
+import javax.websocket.*;
+import java.net.URI;
+
+@ClientEndpoint
+public class WebSocketClientExample {
+    @OnMessage
+    public void onMessage(String message, Session session) {
+        System.out.println("Received message: " + message);
+    }
+
+    public static void main(String[] args) throws Exception {
+        ClientManager client = ClientManager.createClient();
+        client.connectToServer(WebSocketClientExample.class, new URI("ws://localhost:8080/websocket"));
+        // WebSocket server URL may vary
+    }
+}
