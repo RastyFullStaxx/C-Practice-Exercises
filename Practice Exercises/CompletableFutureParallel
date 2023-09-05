@@ -1,0 +1,31 @@
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+
+public class CompletableFutureParallel {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
+        CompletableFuture<Integer> future1 = CompletableFuture.supplyAsync(() -> compute(5));
+        CompletableFuture<Integer> future2 = CompletableFuture.supplyAsync(() -> compute(7));
+        CompletableFuture<Integer> future3 = CompletableFuture.supplyAsync(() -> compute(3));
+
+        CompletableFuture<Integer> combinedFuture = CompletableFuture.allOf(future1, future2, future3);
+
+        combinedFuture.thenRun(() -> {
+            int result1 = future1.join();
+            int result2 = future2.join();
+            int result3 = future3.join();
+
+            int sum = result1 + result2 + result3;
+            System.out.println("Sum: " + sum);
+        }).get(); // Wait for all tasks to complete and print the sum
+    }
+
+    public static int compute(int value) {
+        // Simulate a time-consuming computation
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        return value * 2;
+    }
+}
