@@ -8,7 +8,7 @@ class TreeNode {
     }
 }
 
-public class BSTInsertion {
+public class BSTInsertionII {
     public static void main(String[] args) {
         TreeNode root = null;
         root = insert(root, 50);

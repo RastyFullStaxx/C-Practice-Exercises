@@ -1,4 +1,4 @@
-public class BinaryToDecimal {
+public class BinaryToDecimalII {
     public static void main(String[] args) {
         String binaryString = "101010";
         int decimal = Integer.parseInt(binaryString, 2);
