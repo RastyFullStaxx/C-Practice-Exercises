@@ -18,7 +18,7 @@ public class HappyNumberChecker {
         return slow == 1;
     }
 
-    public static int digitSquareSum(int num) {
+ Find the Second Largest Element in an Array   public static int digitSquareSum(int num) {
         int sum = 0;
 
         while (num > 0) {
