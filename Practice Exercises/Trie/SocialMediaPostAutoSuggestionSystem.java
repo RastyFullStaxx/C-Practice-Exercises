@@ -22,3 +22,18 @@ public class SocialMediaPostAutoSuggestionSystem {
         System.out.println("Post suggestions for 'New': " + suggestions); // Should return ["New blog post alert: Tips for productivity!"]
     }
 
+    private TrieNode root;
+
+    public SocialMediaPostAutoSuggestionSystem() {
+        // Implement a constructor to initialize the Trie
+    }
+
+    public void addPost(String postText) {
+        // Implement a method to add a social media post to the Trie
+    }
+
+    public List<String> getSuggestions(String prefix) {
+        // Implement a method to get social media post suggestions for a given prefix from the Trie
+        return null;
+    }
+}
