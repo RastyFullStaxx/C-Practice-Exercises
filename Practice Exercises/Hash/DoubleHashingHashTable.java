@@ -40,4 +40,10 @@ class DoubleHashingHashTable {
         hashTable.insert("kiwi");
         hashTable.insert("melon");
         hashTable.insert("pear");
-        hashTable.insert("berry
+        hashTable.insert("berry");
+        hashTable.insert("avocado");
+        hashTable.insert("peach");
+
+        hashTable.displayTable();
+    }
+}
