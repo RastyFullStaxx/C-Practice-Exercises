@@ -272,7 +272,8 @@ public class ProgrammingTaskFive {
      */
 
     public static void main(String[] args) {
-        // File paths for the dictionary, input, and output files
+
+        // File paths for the dictionary, input, and output files (MODIFY ACCORDING TO YOUR SUITING)
         String dictionaryFilePath = "C:\\Users\\MSI\\eclipse-workspace\\performanceTask\\words.txt";
         String inputFilePath = "C:\\Users\\MSI\\eclipse-workspace\\performanceTask\\input.txt";
         String outputFilePath = "C:\\Users\\MSI\\eclipse-workspace\\performanceTask\\output.txt";
