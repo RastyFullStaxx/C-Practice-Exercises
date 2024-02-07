@@ -1,0 +1,196 @@
+package PracticalApplications;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class EsparteroRastyC1 {
+
+    private static JTextField searchBar;
+    private static ButtonGroup brewingStyleGroup;
+    private static JCheckBox hot, bread, toastedBread;
+    private static JTextField amount;
+    private static JRadioButton selectDrip, selectPourOver, selectCold, selectEspresso, selectRistretto;
+
+    public static void main(String[] args) {
+
+        searchBar = new JTextField(20);
+        brewingStyleGroup = new ButtonGroup();
+        hot = new JCheckBox("Hot");
+        bread = new JCheckBox("Bread");
+        toastedBread = new JCheckBox("Toasted Bread");
+        amount = new JTextField(10);
+        selectDrip = new JRadioButton("Drip");
+        selectPourOver = new JRadioButton("Pour over");
+        selectCold = new JRadioButton("Cold");
+        selectEspresso = new JRadioButton("Espresso");
+        selectRistretto = new JRadioButton("Ristretto");
+
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("/");
+
+        JMenuItem espresso = new JMenuItem("Espresso");
+        JMenuItem redEye = new JMenuItem("Red Eye");
+        JMenuItem blackEye = new JMenuItem("Black Eye");
+        JMenuItem americano = new JMenuItem("Americano");
+        JMenuItem macchiato = new JMenuItem("Macchiato");
+        JMenuItem cappuccino = new JMenuItem("Cappuccino");
+        JMenuItem cafeLatte = new JMenuItem("Cafè Latte");
+
+        menu.add(espresso);
+        menu.add(redEye);
+        menu.add(blackEye);
+        menu.add(americano);
+        menu.add(macchiato);
+        menu.add(cappuccino);
+        menu.add(cafeLatte);
+
+        menuBar.add(menu);  
+
+        ActionListener menuListener = e -> {
+            JMenuItem menuItem = (JMenuItem) e.getSource();
+            String itemName = menuItem.getText();
+
+            searchBar.setText(itemName);
+
+            int itemPrice = getItemPrice(itemName);
+            int totalAmount = Integer.parseInt(amount.getText()) + itemPrice;
+            amount.setText(String.valueOf(totalAmount));
+        };
+
+        espresso.addActionListener(menuListener);
+        redEye.addActionListener(menuListener);
+        blackEye.addActionListener(menuListener);
+        americano.addActionListener(menuListener);
+        macchiato.addActionListener(menuListener);
+        cappuccino.addActionListener(menuListener);
+        cafeLatte.addActionListener(menuListener);
+
+        JPanel panel1 = new JPanel();
+        panel1.setLayout(new FlowLayout());
+        panel1.add(searchBar);
+        panel1.add(menuBar);
+
+        JPanel panel2 = new JPanel();
+        panel2.setLayout(new FlowLayout(FlowLayout.LEFT));
+        JLabel brewingStyleText = new JLabel("Brewing Style");
+        panel2.add(brewingStyleText);
+
+        JPanel panel3 = new JPanel();
+        panel3.setLayout(new GridLayout(8, 1));
+
+        brewingStyleGroup.add(selectDrip);
+        brewingStyleGroup.add(selectPourOver);
+        brewingStyleGroup.add(selectCold);
+        brewingStyleGroup.add(selectEspresso);
+        brewingStyleGroup.add(selectRistretto);
+
+        panel3.add(selectDrip);
+        panel3.add(selectPourOver);
+        panel3.add(selectCold);
+        panel3.add(selectEspresso);
+        panel3.add(selectRistretto);
+        panel3.add(hot);
+        panel3.add(bread);
+        panel3.add(toastedBread);
+
+        JPanel panel4 = new JPanel();
+        panel4.setLayout(new FlowLayout());
+        JButton calculate = new JButton("Calculate");
+        JButton clear = new JButton("Clear");
+        panel4.add(calculate);
+        panel4.add(clear);
+
+        JPanel panel5 = new JPanel();
+        panel5.setLayout(new FlowLayout(FlowLayout.LEFT));
+        JLabel amountLabelText = new JLabel("Amount (PHP)");
+        panel5.add(amountLabelText);
+        panel5.add(amount);
+
+        clear.addActionListener(e -> {
+            brewingStyleGroup.clearSelection();
+            hot.setSelected(false);
+            bread.setSelected(false);
+            toastedBread.setSelected(false);
+            searchBar.setText("");
+            amount.setText("");
+        });
+
+        calculate.addActionListener(e -> {
+            int totalAmount = calculateAmount();
+            amount.setText(String.valueOf(totalAmount));
+        });
+
+        JFrame mainFrame = new JFrame("Coffee Order System");
+        mainFrame.setLocationRelativeTo(null);
+        mainFrame.setSize(350, 600);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setLayout(new GridLayout(5, 1));
+        mainFrame.setResizable(false);
+        mainFrame.add(panel1);
+        mainFrame.add(panel2);
+        mainFrame.add(panel3);
+        mainFrame.add(panel4);
+        mainFrame.add(panel5);
+        mainFrame.setVisible(true);
+    }
+
+    private static int getItemPrice(String itemName) {
+        switch (itemName) {
+            case "Espresso":
+                return 120;
+            case "Red Eye":
+            case "Black Eye":
+                return 115;
+            case "Americano":
+                return 117;
+            case "Macchiato":
+                return 125;
+            case "Cappuccino":
+                return 126;
+            case "Cafè Latte":
+                return 128;
+            default:
+                return 0;
+        }
+    }
+
+    private static int calculateAmount() {
+        int totalPrice = 0;
+
+        switch (searchBar.getText()) {
+            case "Espresso":
+                totalPrice += 120;
+                break;
+            case "Red Eye":
+            case "Black Eye":
+                totalPrice += 115;
+                break;
+            case "Americano":
+                totalPrice += 117;
+                break;
+            case "Macchiato":
+                totalPrice += 125;
+                break;
+            case "Cappuccino":
+                totalPrice += 126;
+                break;
+            case "Cafè Latte":
+                totalPrice += 128;
+                break;
+            default:
+                break;
+        }
+
+        if (selectDrip.isSelected()) totalPrice += 15;
+        if (selectPourOver.isSelected()) totalPrice += 17;
+        if (selectCold.isSelected()) totalPrice += 12;
+        if (selectEspresso.isSelected()) totalPrice += 10;
+        if (selectRistretto.isSelected()) totalPrice += 12;
+
+        if (hot.isSelected()) totalPrice += 5;
+        if (bread.isSelected()) totalPrice += 15;
+        if (toastedBread.isSelected()) totalPrice += 23;
+        return totalPrice;
+    }
+}
