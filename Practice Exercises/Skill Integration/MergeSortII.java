@@ -30,4 +30,23 @@ public class MergeSort {
                 j++;
             }
             k++;
-       
+        }
+        while (i < n1) {
+            array[k] = leftArray[i];
+            i++;
+            k++;
+        }
+        while (j < n2) {
+            array[k] = rightArray[j];
+            j++;
+            k++;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] array = {12, 11, 13, 5, 6, 7};
+        System.out.println("Array before sorting: " + java.util.Arrays.toString(array));
+        mergeSort(array, 0, array.length - 1);
+        System.out.println("Array after sorting: " + java.util.Arrays.toString(array));
+    }
+}
