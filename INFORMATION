@@ -1,0 +1,167 @@
+INSERT INTO HousingLoanInfo (BorrowerID, TCT_OCT_CCT_NO, LoanAmount, LoanTerm, ModeOfPayment) VALUES
+(0000001, 'A12B34C5', 120000, 10, 'SD'),
+(0000002, 'B23C45D6', 123100, 11, 'SD'),
+(0000003, 'C34D56E7', 1210000, 12, 'SD'),
+(0000004, 'D45E67F8', 500000, 14, 'SD'),
+(0000005, 'E56F78G9', 700000, 15, 'SD'),
+(0000006, 'F67G89H0', 60000, 16, 'OCTP'),
+(0000007, 'G78H90I1', 210000, 18, 'OCTP'),
+(0000008, 'H89I01J2', 2310000, 19, 'OCTP'),
+(0000009, 'I90J12K3', 700000, 20, 'OCTC'),
+(0000010, 'J01K23L4', 650000, 20, 'OCTC'),
+(0000011, 'K12L34M5', 540000, 22, 'OCTC'),
+(0000012, 'L23M45N6', 540200, 24, 'CAD'),
+(0000013, 'M34N56O7', 453045, 25, 'CAD'),
+(0000014, 'N45O67P8', 435034, 27, 'CAD'),
+(0000015, 'O56P78Q9', 345353, 29, 'CAB'),
+(0000016, 'P67Q89R0', 53450, 30, 'CAB'),
+(0000017, 'Q78R90S1', 123000, 32, 'CAB'),
+(0000018, 'R89S01T2', 250000, 33, 'CAB'),
+(0000019, 'S90T12U3', 450000, 34, 'CAB'),
+(0000020, 'T01U23V4', 120000, 35, 'CAB');
+
+
+INSERT INTO BorrowerInfo (BorrowerID, BorrowerName, BorrowerCitizenship, Birthdate, Sex, PermanentAddress, PresentAddress, MaritalStatus, BorrowerHomeLandline, BorrowerCellphone, BorrowerEmailAddress, HomeOwnership, YearsOfStay, EESSGSISIDNo) VALUES
+(0000001, 'Earl Gem', 'Filipino', '2003-05-21', 'M', '123 Main Street, Makati City', '456 Elm Street, Quezon City', 'Married', '2 123 4567', '0912 345 6789', 'earlpogi@gmail.com', 'Owned', 10, '5233-AG-2021'),
+(0000002, 'John Doe', 'Filipino', '1990-12-15', 'M', '789 Maple Avenue, Taguig City', '789 Maple Avenue, Manila', 'Single', '2 987 6543', '0987 654 3210', 'johndoe@example.com', 'Owned', 5, '7578-YI-2021'),
+(0000003, 'Jane Doe', 'Filipino', '1985-08-30', 'F', '456 Oak Street, Pasig City', '456 Oak Street, Cavite City, Cavite', 'Divorced', '2 345 6789', '0918 765 4321', 'janedoe@example.com', 'Owned', 15, '2651-LL-2023'),
+(0000004, 'Michael Smith', 'Filipino', '1995-04-02', 'M', '321 Pine Street, Mandaluyong City', '789 Cedar Avenue, Angeles City, Pampanga', 'Single', '2 234 5678', '0977 654 3210', 'michael.smith@example.com', 'Rented', 3, '8511-FV-2021'),
+(0000005, 'Sarah Lee', 'Filipino', '1988-11-12', 'F', '987 Elm Street, Manila', '987 Elm Street, Puerto Princesa City, Palawan', 'Married', '2 876 5432', '0917 876 5432', 'sarah.lee@example.com', 'Owned', 8, '7980-MM-2020'),
+(0000006, 'Richard Roe', 'Filipino', '1978-06-18', 'M', '123 Palm Street, Cebu City', '123 Palm Street, Cebu City', 'Married', '2 123 6789', '0912 678 9012', 'richard.roe@example.com', 'Owned', 12, '5233-AG-2022'),
+(0000007, 'Emily Davis', 'Filipino', '1989-07-29', 'F', '789 Pine Street, Davao City', '789 Pine Street, Davao City', 'Single', '2 456 7890', '0987 123 4567', 'emily.davis@example.com', 'Owned', 7, '7578-YI-2022'),
+(0000008, 'William Brown', 'Filipino', '1980-08-30', 'M', '456 Oak Street, Bacolod City', '456 Oak Street, Bacolod City', 'Divorced', '2 789 1234', '0918 234 5678', 'william.brown@example.com', 'Owned', 18, '2651-LL-2024'),
+(0000009, 'Olivia Green', 'Filipino', '1991-09-14', 'F', '321 Pine Street, Iloilo City', '321 Pine Street, Iloilo City', 'Single', '2 345 6789', '0977 123 4567', 'olivia.green@example.com', 'Rented', 4, '8511-FV-2022'),
+(0000010, 'David White', 'Filipino', '1988-10-10', 'M', '987 Elm Street, Zamboanga City', '987 Elm Street, Zamboanga City', 'Married', '2 876 5432', '0917 234 5678', 'david.white@example.com', 'Owned', 10, '7980-MM-2021'),
+(0000011, 'Sophia Black', 'Filipino', '1993-11-11', 'F', '654 Maple Street, Naga City', '654 Maple Street, Naga City', 'Single', '2 345 6789', '0912 345 6789', 'sophia.black@example.com', 'Owned', 6, '5233-AG-2023'),
+(0000012, 'James Wilson', 'Filipino', '1982-12-12', 'M', '321 Pine Street, San Fernando City', '321 Pine Street, San Fernando City', 'Married', '2 123 4567', '0987 654 3210', 'james.wilson@example.com', 'Owned', 15, '7578-YI-2023'),
+(0000013, 'Charlotte Martinez', 'Filipino', '1985-01-01', 'F', '123 Oak Street, General Santos City', '123 Oak Street, General Santos City', 'Divorced', '2 345 6789', '0918 765 4321', 'charlotte.martinez@example.com', 'Owned', 9, '2651-LL-2025'),
+(0000014, 'Henry Moore', 'Filipino', '1995-02-02', 'M', '789 Elm Street, Baguio City', '789 Elm Street, Baguio City', 'Single', '2 234 5678', '0977 654 3210', 'henry.moore@example.com', 'Rented', 5, '8511-FV-2023'),
+(0000015, 'Isabella Taylor', 'Filipino', '1988-03-03', 'F', '456 Maple Street, Laoag City', '456 Maple Street, Laoag City', 'Married', '2 876 5432', '0917 876 5432', 'isabella.taylor@example.com', 'Owned', 11, '7980-MM-2022'),
+(0000016, 'Thomas Anderson', 'Filipino', '1990-04-04', 'M', '654 Oak Street, Caloocan City', '654 Oak Street, Caloocan City', 'Single', '2 345 6789', '0912 345 6789', 'thomas.anderson@example.com', 'Owned', 3, '5233-AG-2024'),
+(0000017, 'Ava Thomas', 'Filipino', '1983-05-05', 'F', '321 Maple Street, Muntinlupa City', '321 Maple Street, Muntinlupa City', 'Married', '2 123 4567', '0987 654 3210', 'ava.thomas@example.com', 'Owned', 13, '7578-YI-2024'),
+(0000018, 'Daniel Jackson', 'Filipino', '1986-06-06', 'M', '987 Elm Street, Las Pinas City', '987 Elm Street, Las Pinas City', 'Divorced', '2 345 6789', '0918 765 4321', 'daniel.jackson@example.com', 'Owned', 8, '2651-LL-2026'),
+(0000019, 'Mia Harris', 'Filipino', '1992-07-07', 'F', '654 Pine Street, Marikina City', '654 Pine Street, Marikina City', 'Single', '2 234 5678', '0977 654 3210', 'mia.harris@example.com', 'Rented', 4, '8511-FV-2024'),
+(0000020, 'Liam Robinson', 'Filipino', '1989-08-08', 'M', '456 Maple Street, Antipolo City', '456 Maple Street, Antipolo City', 'Married', '2 876 5432', '0917 876 5432', 'liam.robinson@example.com', 'Owned', 10, '7980-MM-2023');
+
+
+
+INSERT INTO BankingInfo (BorrowerID, AccountNo, Bank, BranchAddress, TypeOfAccount, DateOpened, AveBalance, IssuerName) VALUES
+(0000001, '5648901234', 'GHI Bank', '468 Tulip Lane, Taguig City', 'Savings', '2019-06-10', 18000, 'Earl Gem'),
+(0000001, '6789712345', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Earl Gem'),
+(0000001, '9010345678', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Earl Gem'),
+(0000002, '3456719012', 'YZA Bank', '791 Magnolia Drive, Makati City', 'Savings', '2019-11-05', 35000, 'John Doe'),
+(0000002, '5278901234', 'VWX Bank', '802 Daisy Avenue, Taguig City', 'Savings', '2020-02-20', 4000, 'John Doe'),
+(0000003, '6789002345', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Jane Doe'),
+(0000003, '9012340678', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Jane Doe'),
+(0000004, '3356789012', 'YZA Bank', '791 Magnolia Drive, Makati City', 'Savings', '2019-11-05', 35000, 'Michael Smith'),
+(0000004, '5678901014', 'VWX Bank', '802 Daisy Avenue, Taguig City', 'Savings', '2020-02-20', 4000, 'Michael Smith'),
+(0000005, '6712012345', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Sarah Lee'),
+(0000005, '8022345678', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Sarah Lee'),
+(0000006, '3449789012', 'YZA Bank', '791 Magnolia Drive, Makati City', 'Savings', '2019-11-05', 35000, 'Richard Roe'),
+(0000006, '4978901234', 'VWX Bank', '802 Daisy Avenue, Taguig City', 'Savings', '2020-02-20', 4000, 'Richard Roe'),
+(0000007, '6289112345', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Emily Davis'),
+(0000007, '7912345678', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Emily Davis'),
+(0000008, '6556789012', 'YZA Bank', '791 Magnolia Drive, Makati City', 'Savings', '2019-11-05', 35000, 'William Brown'),
+(0000008, '5601901234', 'VWX Bank', '802 Daisy Avenue, Taguig City', 'Savings', '2020-02-20', 4000, 'William Brown'),
+(0000009, '6729012945', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Olivia Green'),
+(0000009, '1012345278', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Olivia Green');
+
+
+INSERT INTO OtherLoan (BorrowerID, Loan_Availment_Key, Security, Type, Maturity_Date, Amount_Balance, Mo_Amortization) VALUES
+('0000001', 'A0001', 'Property', 'Mortgage Loan', '2025-12-31', 300000, 15000),
+('0000001', 'A0002', 'Vehicle', 'Auto Loan', '2024-08-15', 250000, 12000),
+('0000001', 'A0003', 'Savings', 'Personal Loan', '2023-06-20', 100000, 8000),
+('0000008', 'A0004', 'Property', 'Mortgage Loan', '2026-02-28', 500000, 25000),
+('0000008', 'A0005', 'Savings', 'Personal Loan', '2024-11-10', 150000, 10000),
+('0000010', 'A0006', 'Vehicle', 'Auto Loan', '2023-09-15', 200000, 15000),
+('0000010', 'A0007', 'Property', 'Mortgage Loan', '2025-05-30', 400000, 20000),
+('0000010', 'A0008', 'Savings', 'Personal Loan', '2023-12-05', 120000, 9000),
+('0000014', 'A0009', 'Vehicle', 'Auto Loan', '2024-04-18', 180000, 13000),
+('0000016', 'A0010', 'Property', 'Mortgage Loan', '2026-07-22', 600000, 30000),
+('0000016', 'A0011', 'Savings', 'Personal Loan', '2023-10-15', 200000, 14000),
+('0000018', 'A0012', 'Vehicle', 'Auto Loan', '2024-03-28', 220000, 16000),
+('0000018', 'A0013', 'Property', 'Mortgage Loan', '2025-09-10', 350000, 18000),
+('0000019', 'A0014', 'Savings', 'Personal Loan', '2023-07-15', 80000, 7000),
+('0000019', 'A0015', 'Vehicle', 'Auto Loan', '2024-12-20', 280000, 17000);
+
+
+INSERT INTO RealEstate (BorrowerID, Real_Estate_Key, Real_Estate_Location, Type_of_property, Acquisition_Cost, Market_Value, Mortgage_Balance, Rental_Income) VALUES
+('0000001', '00001', 'Maui Oasis Underpass, Santa Mesa, Manila, Metro Manila', 'Real Estate Property', 520000, 850000, 500000, 20000),
+('0000002', '00002', 'Sunset Boulevard, Quezon City, Metro Manila', 'Residential Property', 650000, 980000, 400000, 25000),
+('0000003', '00003', 'Emerald Tower, Ortigas Center, Pasig City', 'Commercial Property', 1500000, 2200000, 1000000, 80000),
+('0000004', '00004', 'Pine Residences, Taguig City, Metro Manila', 'Residential Property', 800000, 1200000, 600000, 30000),
+('0000005', '00005', 'Diamond Plaza, Makati City, Metro Manila', 'Commercial Property', 3000000, 4500000, 2000000, 120000),
+('0000005', '00006', 'Azure Urban Resort Residences, Parañaque City', 'Residential Property', 1200000, 1800000, 900000, 40000),
+('0000005', '00007', 'Central Park Tower, Bonifacio Global City, Taguig City', 'Commercial Property', 2500000, 3500000, 1500000, 100000),
+('0000012', '00008', 'Golden Grove Subdivision, Davao City', 'Residential Property', 500000, 800000, 400000, 15000),
+('0000012', '00009', 'Sapphire Plaza, Cebu City', 'Commercial Property', 1800000, 2500000, 1200000, 70000),
+('0000016', '00010', 'Pearl Tower, Mandaluyong City, Metro Manila', 'Residential Property', 700000, 1100000, 500000, 28000),
+('0000016', '00011', 'Horizon Homes, Quezon City, Metro Manila', 'Real Estate Property', 900000, 1400000, 700000, 35000),
+('0000019', '00012', 'Oceanview Condominiums, Pasay City, Metro Manila', 'Residential Property', 1000000, 1500000, 800000, 40000),
+('0000019', '00013', 'Riverfront Gardens, Bacolod City', 'Real Estate Property', 600000, 900000, 400000, 18000),
+('0000020', '00014', 'Parkview Residences, Iloilo City', 'Residential Property', 400000, 650000, 300000, 12000),
+('0000020', '00015', 'Bayfront Towers, Zamboanga City', 'Commercial Property', 2200000, 3000000, 1500000, 80000);
+
+
+INSERT INTO Collateral (TCT_OCT_CCT_NO, Property_Location, Type_of_Property, Name_of_Project, Tax_Declaration, Land_Area, Lot_Unit_No, Block_Bldg_No)
+VALUES 
+('A12B34C5', 'Kalayaan Avenue, Makati, Metro Manila', 'Single Detached', 'Crestview Realty Inc.', 293104, 102, 'Unit 510', 'Bldg. 3'),
+('B23C45D6', 'Commonwealth Avenue, Quezon City, Metro Manila', 'Condominium', 'Crestview Realty Inc.', 517208, 95, 'Lot 217', 'Bldg. 4'),
+('C34D56E7', 'Roxas Boulevard, Pasay, Metro Manila', 'Rowhouse', 'Apex Land Development', 641305, 110, 'Unit 703', 'Bldg. 5'),
+('D45E67F8', 'Taft Avenue, Manila, Metro Manila', 'Single Attached', 'Apex Land Development', 874402, 98, 'Lot 415', 'Bldg. 6'),
+('E56F78G9', 'Ortigas Avenue, Pasig, Metro Manila', 'Townhouse', 'Horizon Estates Ltd.', 129507, 105, 'Unit 628', 'Bldg. 7'),
+('F67G89H0', 'Bonifacio Avenue, Taguig, Metro Manila', 'Duplex', 'Horizon Estates Ltd.', 365611, 92, 'Lot 132', 'Bldg. 8'),
+('G78H90I1', 'Ayala Avenue, Makati, Metro Manila', 'Rowhouse', 'Summit Properties Co.', 982710, 108, 'Unit 924', 'Bldg. 9'),
+('H89I01J2', 'España Boulevard, Manila, Metro Manila', 'Single Detached', 'Summit Properties Co.', 443806, 96, 'Lot 319', 'Bldg. 10'),
+('I90J12K3', 'Shaw Boulevard, Mandaluyong, Metro Manila', 'Townhouse', 'Pinnacle Construction Group', 778903, 103, 'Unit 811', 'Bldg. 11'),
+('J01K23L4', 'Aurora Boulevard, Quezon City, Metro Manila', 'Condominium', 'Pinnacle Construction Group', 215009, 99, 'Lot 526', 'Bldg. 12'),
+('K12L34M5', 'C5 Road, Taguig, Metro Manila', 'Single Attached', 'Skyline Ventures Inc.', 536104, 106, 'Unit 337', 'Bldg. 13'),
+('L23M45N6', 'MacArthur Highway, Malolos, Bulacan', 'Duplex', 'Skyline Ventures Inc.', 997202, 94, 'Lot 619', 'Bldg. 14'),
+('M34N56O7', 'Rizal Avenue, San Fernando, Pampanga', 'Rowhouse', 'Evergreen Land Holdings', 624308, 101, 'Unit 428', 'Bldg. 15'),
+('N45O67P8', 'Gen. Luna Street, Iloilo City, Iloilo', 'Single Detached', 'Evergreen Land Holdings', 381407, 97, 'Lot 813', 'Bldg. 16'),
+('O56P78Q9', 'R. Magsaysay Boulevard, Naga City, Camarines Sur', 'Townhouse', 'Prestige Realty Development', 859506, 109, 'Unit 245', 'Bldg. 17'),
+('P67Q89R0', 'Lacson Street, Bacolod City, Negros Occidental', 'Condominium', 'Prestige Realty Development', 203611, 93, 'Lot 721', 'Bldg. 18'),
+('Q78R90S1', 'Gen. Maxilom Avenue, Cebu City, Cebu', 'Duplex', 'Landmark Properties Corp.', 754708, 104, 'Unit 539', 'Bldg. 19'),
+('R89S01T2', 'Duterte Street, Davao City, Davao del Sur', 'Single Attached', 'Landmark Properties Corp.', 462801, 91, 'Lot 914', 'Bldg. 20'),
+('S90T12U3', 'C.M. Recto Avenue, Cagayan de Oro, Misamis Oriental', 'Rowhouse', 'Paramount Builders Ltd.', 589903, 107, 'Unit 632', 'Bldg. 21'),
+('T01U23V4', 'A. Bichara Street, Legazpi City, Albay', 'Townhouse', 'Paramount Builders Ltd.', 320010, 100, 'Lot 408', 'Bldg. 22');
+
+
+
+INSERT INTO EmploymentInfo (
+    BorrowerID,
+    EE_SSS_GSIS_ID_No,
+    Employer_Business_Name,
+    Employer_Business_Address,
+    Employer_Direct_Line,
+    Employer_Trunk_Line,
+    Employer_Email_Address,
+    Occupation,
+    TIN,
+    Position_Department,
+    Years_in_Business_Employment,
+    No_of_Dependents
+) VALUES
+('0000001', '5233-AG-2021', 'ABC Company', '789 Business Street, Cityville', '0 2 987 6543', '0 2 123 4567', 'hr@abccompany.com', 'Software Engineer', '123-456-789', 'Senior Developer', 7, 1),
+('0000002', '7578-YI-2021', 'XYZ Corporation', '456 Corporate Avenue, Metro Manila', '0 2 345 6789', NULL, 'info@xyzcorp.com', 'Accountant', '987-654-321', 'Financial Analyst', 3, 0),
+('0000003', '2651-LL-2023', 'DEF Enterprises', '321 Main Street, Quezon City', '0 2 234 5678', '0 2 987 6543', 'contact@defent.com', 'Marketing Manager', '654-321-098', 'Marketing Specialist', 9, 2),
+('0000004', '8511-FV-2021', 'GHI Industries', '555 Industry Boulevard, Makati City', '0 2 876 5432', NULL, 'hr@ghiindustries.com', 'HR Manager', '876-543-210', 'HR Generalist', 5, 1),
+('0000005', '7980-MM-2020', 'JKL Solutions', '999 Tech Park, Taguig City', '0 2 765 4321', '0 2 345 6789', 'careers@jklsolutions.com', 'IT Consultant', '765-432-109', 'Systems Analyst', 11, 0),
+('0000006', '0332-UI-2020', 'MNO Corporation', '777 Finance Avenue, Mandaluyong City', '0 2 543 2109', NULL, 'info@mnocorp.com', 'Finance Manager', '654-321-098', 'Finance Analyst', 8, 2),
+('0000007', '4530-PX-2019', 'PQR Group', '888 Plaza Drive, Pasig City', '0 2 456 7890', NULL, 'contact@pqrgrp.com', 'Operations Manager', '123-098-765', 'Operations Specialist', 6, 1),
+('0000008', '8099-QU-2022', 'STU Enterprises', '444 Innovation Road, Quezon City', '0 2 345 6789', '0 2 876 5432', 'hr@stuenterprises.com', 'Marketing Executive', '876-543-210', 'Marketing Manager', 4, 0),
+('0000009', '1847-GZ-2020', 'VWX Solutions', '222 Tech Boulevard, Makati City', '0 2 987 6543', '0 2 234 5678', 'info@vwxsolutions.com', 'IT Manager', '987-654-321', 'IT Specialist', 10, 3),
+('0000010', '2341-WF-2019', 'YZA Group', '333 Business Park, Taguig City', '0 2 876 5432', NULL, 'careers@yzagroup.com', 'Business Analyst', '654-321-098', 'Business Development', 7, 1),
+('0000011', '3771-GC-2022', 'ABC Company', '789 Business Street, Cityville', '0 2 987 6543', '0 2 123 4567', 'hr@abccompany.com', 'Software Engineer', '123-456-789', 'Senior Developer', 7, 1),
+('0000012', '8148-KX-2020', 'XYZ Corporation', '456 Corporate Avenue, Metro Manila', '0 2 345 6789', NULL, 'info@xyzcorp.com', 'Accountant', '987-654-321', 'Financial Analyst', 3, 0),
+('0000013', '2120-PD-2020', 'DEF Enterprises', '321 Main Street, Quezon City', '0 2 234 5678', '0 2 987 6543', 'contact@defent.com', 'Marketing Manager', '654-321-098', 'Marketing Specialist', 9, 2),
+('0000014', '1463-DN-2019', 'GHI Industries', '555 Industry Boulevard, Makati City', '0 2 876 5432', NULL, 'hr@ghiindustries.com', 'HR Manager', '876-543-210', 'HR Generalist', 5, 1),
+('0000015', '8444-YJ-2021', 'JKL Solutions', '999 Tech Park, Taguig City', '0 2 765 4321', '0 2 345 6789', 'careers@jklsolutions.com', 'IT Consultant', '765-432-109', 'Systems Analyst', 11, 0),
+('0000016', '2339-YQ-2020', 'MNO Corporation', '777 Finance Avenue, Mandaluyong City', '0 2 543 2109', NULL, 'info@mnocorp.com', 'Finance Manager', '654-321-098', 'Finance Analyst', 8, 2),
+('0000017', '5089-DJ-2020', 'PQR Group', '888 Plaza Drive, Pasig City', '0 2 456 7890', NULL, 'contact@pqrgrp.com', 'Operations Manager', '123-098-765', 'Operations Specialist', 6, 1),
+('0000018', '1417-OP-2020', 'STU Enterprises', '444 Innovation Road, Quezon City', '0 2 345 6789', '0 2 876 5432', 'hr@stuenterprises.com', 'Marketing Executive', '876-543-210', 'Marketing Manager', 4, 0),
+('0000019', '6620-XH-2018', 'VWX Solutions', '222 Tech Boulevard, Makati City', '0 2 987 6543', '0 2 234 5678', 'info@vwxsolutions.com', 'IT Manager', '987-654-321', 'IT Specialist', 10, 3),
+('0000020', '4086-EV-2022', 'YZA Group', '333 Business Park, Taguig City', '0 2 876 5432', NULL, 'careers@yzagroup.com', 'Business Analyst', '654-321-098', 'Business Development', 7, 1);
+
+
+
