@@ -103,7 +103,7 @@ INSERT INTO BankingInfo (BorrowerID, AccountNo, Bank, BranchAddress, TypeOfAccou
 (0000009, '6729012945', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Olivia Green'),
 (0000009, '1012345278', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Olivia Green');
 
-Rainier Joshua Reyes
+
 CREATE TABLE OtherLoan (
     BorrowerID VARCHAR(14) REFERENCES BorrowerInfo(BorrowerID),
     Loan_Availment_Key VARCHAR(5) PRIMARY KEY,
