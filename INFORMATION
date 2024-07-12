@@ -1,3 +1,12 @@
+-- Table for Housing Loan Information
+CREATE TABLE HousingLoanInfo (
+    BorrowerID VARCHAR(50),
+    TCT_OCT_CCT_NO VARCHAR(50),
+    LoanAmount DECIMAL(15, 2),
+    LoanTerm INT,
+    ModeOfPayment VARCHAR(10),
+    PRIMARY KEY (BorrowerID)
+);
 INSERT INTO HousingLoanInfo (BorrowerID, TCT_OCT_CCT_NO, LoanAmount, LoanTerm, ModeOfPayment) VALUES
 (0000001, 'A12B34C5', 120000, 10, 'SD'),
 (0000002, 'B23C45D6', 123100, 11, 'SD'),
@@ -20,7 +29,24 @@ INSERT INTO HousingLoanInfo (BorrowerID, TCT_OCT_CCT_NO, LoanAmount, LoanTerm, M
 (0000019, 'S90T12U3', 450000, 34, 'CAB'),
 (0000020, 'T01U23V4', 120000, 35, 'CAB');
 
-
+-- Table for Borrower Information
+CREATE TABLE BorrowerInfo (
+    BorrowerID INT,
+    BorrowerName VARCHAR(100),
+    BorrowerCitizenship VARCHAR(50),
+    Birthdate DATE,
+    Sex CHAR(1),
+    PermanentAddress VARCHAR(255),
+    PresentAddress VARCHAR(255),
+    MaritalStatus VARCHAR(20),
+    BorrowerHomeLandline VARCHAR(15),
+    BorrowerCellphone VARCHAR(15),
+    BorrowerEmailAddress VARCHAR(100),
+    HomeOwnership VARCHAR(50),
+    YearsOfStay INT,
+    EESSSGSISIDNo VARCHAR(50),
+    PRIMARY KEY (BorrowerID)
+);
 INSERT INTO BorrowerInfo (BorrowerID, BorrowerName, BorrowerCitizenship, Birthdate, Sex, PermanentAddress, PresentAddress, MaritalStatus, BorrowerHomeLandline, BorrowerCellphone, BorrowerEmailAddress, HomeOwnership, YearsOfStay, EESSGSISIDNo) VALUES
 (0000001, 'Earl Gem', 'Filipino', '2003-05-21', 'M', '123 Main Street, Makati City', '456 Elm Street, Quezon City', 'Married', '2 123 4567', '0912 345 6789', 'earlpogi@gmail.com', 'Owned', 10, '5233-AG-2021'),
 (0000002, 'John Doe', 'Filipino', '1990-12-15', 'M', '789 Maple Avenue, Taguig City', '789 Maple Avenue, Manila', 'Single', '2 987 6543', '0987 654 3210', 'johndoe@example.com', 'Owned', 5, '7578-YI-2021'),
@@ -44,7 +70,18 @@ INSERT INTO BorrowerInfo (BorrowerID, BorrowerName, BorrowerCitizenship, Birthda
 (0000020, 'Liam Robinson', 'Filipino', '1989-08-08', 'M', '456 Maple Street, Antipolo City', '456 Maple Street, Antipolo City', 'Married', '2 876 5432', '0917 876 5432', 'liam.robinson@example.com', 'Owned', 10, '7980-MM-2023');
 
 
-
+-- Table for Banking Information
+CREATE TABLE BankingInfo (
+    BorrowerID  VARCHAR(50),
+    AccountNo VARCHAR(50),
+    Bank VARCHAR(100),
+    BranchAddress VARCHAR(255),
+    TypeOfAccount VARCHAR(50),
+    DateOpened DATE,
+    AveBalance DECIMAL(15, 2),
+    IssuerName VARCHAR(100),
+    PRIMARY KEY (AccountNo)
+);
 INSERT INTO BankingInfo (BorrowerID, AccountNo, Bank, BranchAddress, TypeOfAccount, DateOpened, AveBalance, IssuerName) VALUES
 (0000001, '5648901234', 'GHI Bank', '468 Tulip Lane, Taguig City', 'Savings', '2019-06-10', 18000, 'Earl Gem'),
 (0000001, '6789712345', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Earl Gem'),
@@ -66,7 +103,16 @@ INSERT INTO BankingInfo (BorrowerID, AccountNo, Bank, BranchAddress, TypeOfAccou
 (0000009, '6729012945', 'NOP Bank', '579 Jasmine Avenue, Pasay City', 'Checking', '2020-03-15', 25000, 'Olivia Green'),
 (0000009, '1012345278', 'EFG Bank', '680 Orchid Street, Quezon City', 'Savings', '2018-10-20', 18000, 'Olivia Green');
 
-
+Rainier Joshua Reyes
+CREATE TABLE OtherLoan (
+    BorrowerID VARCHAR(14) REFERENCES BorrowerInfo(BorrowerID),
+    Loan_Availment_Key VARCHAR(5) PRIMARY KEY,
+    Security VARCHAR(50),
+    Type VARCHAR(50),
+    Maturity_Date DATE,
+    Amount_Balance NUMERIC(15, 2),
+    Mo_Amortization NUMERIC(15, 2)
+);
 INSERT INTO OtherLoan (BorrowerID, Loan_Availment_Key, Security, Type, Maturity_Date, Amount_Balance, Mo_Amortization) VALUES
 ('0000001', 'A0001', 'Property', 'Mortgage Loan', '2025-12-31', 300000, 15000),
 ('0000001', 'A0002', 'Vehicle', 'Auto Loan', '2024-08-15', 250000, 12000),
@@ -84,7 +130,16 @@ INSERT INTO OtherLoan (BorrowerID, Loan_Availment_Key, Security, Type, Maturity_
 ('0000019', 'A0014', 'Savings', 'Personal Loan', '2023-07-15', 80000, 7000),
 ('0000019', 'A0015', 'Vehicle', 'Auto Loan', '2024-12-20', 280000, 17000);
 
-
+CREATE TABLE RealEstate (
+    BorrowerID VARCHAR(14) REFERENCES BorrowerInfo(BorrowerID),
+    Real_Estate_Key NUMERIC(5, 0) PRIMARY KEY,
+    Real_Estate_Location VARCHAR(120),
+    Type_of_property VARCHAR(50),
+    Acquisition_Cost NUMERIC(15, 2),
+    Market_Value NUMERIC(15, 2),
+    Mortgage_Balance NUMERIC(15, 2),
+    Rental_Income NUMERIC (15, 2)
+);
 INSERT INTO RealEstate (BorrowerID, Real_Estate_Key, Real_Estate_Location, Type_of_property, Acquisition_Cost, Market_Value, Mortgage_Balance, Rental_Income) VALUES
 ('0000001', '00001', 'Maui Oasis Underpass, Santa Mesa, Manila, Metro Manila', 'Real Estate Property', 520000, 850000, 500000, 20000),
 ('0000002', '00002', 'Sunset Boulevard, Quezon City, Metro Manila', 'Residential Property', 650000, 980000, 400000, 25000),
@@ -102,7 +157,16 @@ INSERT INTO RealEstate (BorrowerID, Real_Estate_Key, Real_Estate_Location, Type_
 ('0000020', '00014', 'Parkview Residences, Iloilo City', 'Residential Property', 400000, 650000, 300000, 12000),
 ('0000020', '00015', 'Bayfront Towers, Zamboanga City', 'Commercial Property', 2200000, 3000000, 1500000, 80000);
 
-
+CREATE TABLE Collateral (
+    TCT_OCT_CCT_NO VARCHAR(13) PRIMARY KEY,
+    Property_Location VARCHAR(120),
+    Type_of_Property VARCHAR(15),
+    Name_of_Project VARCHAR(50),
+    Tax_Declaration INT,
+    Land_Area INT,
+    Lot_Unit_No VARCHAR(12),
+    Block_Bldg_No VARCHAR(12)
+);
 INSERT INTO Collateral (TCT_OCT_CCT_NO, Property_Location, Type_of_Property, Name_of_Project, Tax_Declaration, Land_Area, Lot_Unit_No, Block_Bldg_No)
 VALUES 
 ('A12B34C5', 'Kalayaan Avenue, Makati, Metro Manila', 'Single Detached', 'Crestview Realty Inc.', 293104, 102, 'Unit 510', 'Bldg. 3'),
